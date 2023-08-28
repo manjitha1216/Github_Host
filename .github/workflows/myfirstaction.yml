@@ -9,5 +9,10 @@ jobs:
       run: echo "Hello there"
     - name: Print "Cogratulations"
       run: echo "From, ${{ vars.MY_NAME}}"
+  surname:
+    needs: myfirstjob
+    runs-on: ubuntu-latest
+    steps:
     - name: Surname
       run: echo "Surname - ${{ secrets.MY_SURNAME }}"
+    
